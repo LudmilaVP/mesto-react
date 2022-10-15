@@ -1,15 +1,16 @@
-function ImagePopup() {
+function ImagePopup(cards, onClose) {
     return ( 
-        <section className = 'popup popup_image_zoom' >
+        <section className = {`popup popup_image_zoom' ${card && 'popup_opened'}`} >
         <div className = 'popup__box' >
         <button 
         className = 'popup__close'
-        type = 'button' > </button>  
+        type = 'button' 
+        onClick={onClose}> </button>  
         <img className = 'popup__image'
-        src = '#'
-        alt = 'Картинка' />
-        <h2 className = 'popup__caption' > </h2>  
+        src={card ? card.link : ''} alt={card ? card.name : ''} />
+        <h2 className = 'popup__caption' >{card ? card.name : ''}</h2>  
         </div>  
         </section>
     )
 }
+export default ImagePopup
