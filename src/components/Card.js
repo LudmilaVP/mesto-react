@@ -1,6 +1,6 @@
-function Card({card, onClickCard}) {
+function Card({card, onCardClick}) {
     function handleClick() {
-        onClickCard(card);
+        onCardClick(card);
     }
     return (
         <div className="element-template">
