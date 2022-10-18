@@ -1,18 +1,15 @@
 import React from 'react';
-//import ReactDOM from 'react-dom/client';
+
 import './index.css';
-import App from './components/App.js';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
-import {StrictMode} from 'react';
-import {createRoot} from 'react-dom/client';
-const rootElement = 
-document.getElementById('root');
-const root = 
-createRoot(rootElement);
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-);
+import { createRoot } from 'react-dom/client';
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<React.StrictMode>
+  <App />
+</React.StrictMode>);
+
+
 reportWebVitals();
