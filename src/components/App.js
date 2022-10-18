@@ -1,9 +1,10 @@
+import React from 'react';
 import Header from './Header.js';
 import Footer from './Footer.js';
 import Main from './Main.js';
 import PopupWithForm from './PopupWithForm.js';
 import ImagePopup from './ImagePopup.js';
-import React from 'react';
+
 
 function App() {
     const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
@@ -34,7 +35,7 @@ function App() {
         setSelectedCard(undefined);
     }
     return ( 
-        <body className = 'page'>
+        <div className = 'page'>
         
         <Header />
 
@@ -100,7 +101,7 @@ function App() {
         card={selectedCard}
         />
 
-        </body>
+        </div>
     );
 }
 

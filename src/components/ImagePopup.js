@@ -14,4 +14,4 @@ function ImagePopup({card, onClose}) {
         </section>
     )
 }
-export default ImagePopup
+export default ImagePopup;

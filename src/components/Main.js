@@ -1,6 +1,7 @@
-import Card from './Card.js';
 import React from 'react';
 import api from '../utils/api.js';
+import Card from './Card.js';
+
 
 function Main({onEditAvatar,onAddPlace,onEditProfile, onCardClick}) {
     const [userTitle, setUserTitle] = React.useState('');
@@ -9,14 +10,16 @@ function Main({onEditAvatar,onAddPlace,onEditProfile, onCardClick}) {
     const [cards, setCards] = React.useState([]);
 
 React.useEffect(() => {
-    Promise.all([api.getUserProfile(), api.getInitialCards()])
-    .then(([userData, initialCards]) => {
-    setUserTitle(initialCards.name);
-  setUserDescription(initialCards.about);
-  setUserImage(initialCards.avatar);
-  setCards(userData);
+    Promise.all([api.getInitialCards(), api.getUserProfile()])
+    .then(([initialCards, userData]) => {
+    setUserTitle(userData.name);
+  setUserDescription(userData.about);
+  setUserImage(userData.avatar);
+  setCards(initialCards);
 })
-.catch((err) => console.log(err)); 
+.catch((err) => {
+  console.log(err);
+});
 }, []);
     return ( 
         <main className = 'content'>
@@ -51,6 +54,7 @@ React.useEffect(() => {
               />
             );
           })}
+
         </section> 
         </main>
     );
