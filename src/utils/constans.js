@@ -1,10 +1,3 @@
-const arkhys = new URL('../../images/arkhys.jpg', import.meta.url);
-const chelyabinskoblast = new URL('../../images/chelyabinsk-oblast.jpg', import.meta.url);
-const ivanovo = new URL('../../images/ivanovo.jpg', import.meta.url);
-const kamchatka = new URL('../../images/kamchatka.jpg', import.meta.url);
-const kholmogorskyrayon = new URL('../../images/kholmogorsky-rayon.jpg', import.meta.url);
-const baikal = new URL('../../images/baikal.jpg', import.meta.url);
-
 export const formSettings = {
     formSelector: '.popup__form',
     inputSelector: '.popup__input',
