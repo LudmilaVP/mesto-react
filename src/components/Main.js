@@ -10,7 +10,7 @@ function Main({ onEditAvatar, onAddPlace, onEditProfile, onCardClick, onCardLike
     <main className="content">
       <section className="profile">
         <div className="profile__image-container" onClick={onEditAvatar}>
-          <img className="profile__image" src={currentUser.avatar} alt="Фото аватара"/>
+          <img className="profile__image" src={currentUser.avatar} alt="Фото аватара" />
           <button className="profile__image-overlay" type="button"></button>
         </div>
         <div className="profile__info">
@@ -30,12 +30,12 @@ function Main({ onEditAvatar, onAddPlace, onEditProfile, onCardClick, onCardLike
       </section>
       <section className="elements">
         {cards.map((card) => {
-          return <Card 
-          key={card._id} 
-          onCardClick={onCardClick} 
-          card={card} 
-          onCardLike={onCardLike}
-          onCardDelete={onCardDelete}/>;
+          return <Card
+            key={card._id}
+            onCardClick={onCardClick}
+            card={card}
+            onCardLike={onCardLike}
+            onCardDelete={onCardDelete} />;
         })}
       </section>
     </main>

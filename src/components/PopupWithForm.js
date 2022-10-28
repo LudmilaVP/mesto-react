@@ -11,11 +11,11 @@ function PopupWithForm({ name, title, isOpen, onClose, buttonName, children, onS
         ></button>
         <div className="popup__content">
           <h2 className="popup__title">{title}</h2>
-          <form 
-          onSubmit={onSubmit} 
-          className="popup__form" 
-          name={`${name}_form`} 
-          noValidate>
+          <form
+            onSubmit={onSubmit}
+            className="popup__form"
+            name={`${name}_form`}
+            noValidate>
             {children}
             <button type="submit" className="popup__button">
               {buttonName}
