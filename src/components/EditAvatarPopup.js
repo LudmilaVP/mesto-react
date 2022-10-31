@@ -10,10 +10,15 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar, }) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        onUpdateAvatar({
-            avatar: avatarRef.current.value
-        });
-    }
+        onUpdateAvatar(
+          {
+            avatar: avatarRef.current.value,
+          },
+          () => {
+            avatarRef.current.value = '';
+          }
+        );
+      }
     return (
         <PopupWithForm
             name="avatar"

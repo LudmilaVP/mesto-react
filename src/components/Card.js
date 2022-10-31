@@ -8,7 +8,7 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
   const cardDeleteButtonClassName = (
     `element__delete ${isOwn ? 'element__delete_active' : ''}`
   );
-  const isLiked = card.likes.some(i => i._id === currentUser._id);
+  const isLiked = card.likes.some((i) => i._id === currentUser._id);
   const cardLikeButtonClassName = `element__like ${isLiked ? 'element__like_active' : ''}`;
 
   function handleClick() {
@@ -22,7 +22,7 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
     onCardDelete(card);
   }
   return (
-    <div className="element-template">
+    <div className="element">
       <div className="element__item">
         <img
           src={card.link}

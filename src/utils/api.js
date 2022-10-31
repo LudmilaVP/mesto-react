@@ -55,12 +55,10 @@ class Api {
   }
   //Постановка и снятие лайка
   changeLikeCardStatus(id, isLiked) {
-    return fetch(`${this._url}/cards/likes/${id}`,
-      {
-        method: isLiked ? "PUT" : "DELETE",
+    return fetch(`${this._baseUrl}/cards/likes/${id}`, {
+        method: isLiked ? "DELETE" : "PUT",
         headers: this._headers
-      })
-      .then(res => this._getResponse(res))
+      }).then(this._getResponse)
   }
 
   //Обновление аватара пользователя
