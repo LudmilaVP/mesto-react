@@ -1,4 +1,4 @@
-# Проектная работа 10: Mesto-react
+# Проектная работа 10, 11: Mesto-react
 
 ## О проекте
 
@@ -26,6 +26,11 @@
 - Main.js
 - Header.js
 - Footer.js.
+- Footer.js.
+- EditAvatarPopup
+- EditProfilePopup
+- AddPlacePopup
+
 
 ## Ссылки на проект:
 
